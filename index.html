@@ -1,127 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Loop Demo</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Personal Portfolio Website using HTML and CSS | Codehal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-    #output {
-      margin-top: 20px;
-      padding: 10px;
-      background: white;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-top: 10px;
-      cursor: pointer;
-      background: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-    button:hover {
-      background: #0056b3;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    color: #555;
+    cursor: default;
+}
+
+.logo span {
+    color: #7d2ae8;
+}
+
+.navigation {
+    margin-left: -300px;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: #555;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    color: #7d2ae8;
+}
+
+.btn-talk {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 35px;
+    background: #7d2ae8;
+    border-radius: 10px;
+    border: 2px solid #7d2ae8;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-talk:hover {
+    color: #7d2ae8;
+    background: transparent;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.content {
+    max-width: 500px;
+    color: #555;
+}
+
+.content h2 {
+    font-size: 3em;
+}
+
+.content h2 span {
+    color: #7d2ae8;
+}
+
+.content h4 {
+    font-size: 2em;
+}
+
+.content p {
+    padding: 10px 0 40px 0;
+}
+
+.btn-group a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: #7d2ae8;
+    border-radius: 10px;
+    border: 2px solid #7d2ae8;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-group a:hover:nth-child(1) {
+    color: #7d2ae8;
+    background: transparent;
+}
+
+.btn-group a:nth-child(2) {
+    color: #7d2ae8;
+    background: transparent;
+    margin-left: 30px;
+    padding: 10px 30px;
+}
+
+.btn-group a:hover:nth-child(2) {
+    color: #fff;
+    background: #7d2ae8;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 50px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #7d2ae8;
+    border-radius: 50%;
+    margin-right: 22px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #fff;
+    outline: 2px solid #7d2ae8;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons a i {
+    color: #fff;
+}
   </style>
+
 </head>
+
 <body>
-<h2>Learn For Loops in JavaScript</h2>
-<p>Click the button to generate numbers from 1 to 10 using a for loop!</p>
-<button onclick="generateNumbers()">Generate Numbers</button>
-<div id="output"></div>
 
-<script>
-  function generateNumbers() {
-    let outputDiv = document.getElementById('output');
-    outputDiv.innerHTML = ''; // Clear previous output
+    <header>
+        <h2 class="logo"><span>J</span>oe.</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#" id="cc" onmouseover="hoveroncontact()" onmouseleave="hoverleave()">Contact</a>
+        </nav>
+        <a href="newpage.html"> <button class="btn-talk" id="butt" onclick="displaysmething()">Let's Talk</button></a>
+    </header>
 
-    for (let i = 1; i <= 10; i++) {
-      outputDiv.innerHTML += `<p>Number: ${i}</p>`;
-    }
-  }
-</script>
+    <section class="home">
+        <div class="content">
+            <h2 id="greet" >i am a boy</h2>
+            <h4>Frontend Developer</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+                Impedit incidunt atque recusandae rem quam.</p>
+            <p id="current-date"></p>
+            <h1 id="displaydetails"></h1>
+
+            <div class="btn-group">
+                <a href="#">Hire Me</a>
+                <a href="#">See Projects</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("greet").innerHTML="Hi,I'm Joe Wilson";
+        document.getElementById("current-date").innerHTML= new Date().toDateString();
+
+        function hoveroncontact(){
+            document.getElementById("cc").innerHTML="12345";
+        }
+
+        function hoverleave(){
+            document.getElementById("cc").innerHTML="Contact";
+        }
+
+    </script>
+
 </body>
-</html>
 
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multiplication Table Generator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-    #output {
-      margin-top: 20px;
-      padding: 10px;
-      background: white;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      display: inline-block;
-      text-align: left;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-top: 10px;
-      cursor: pointer;
-      background: #28a745;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-    button:hover {
-      background: #218838;
-    }
-    input {
-      padding: 8px;
-      font-size: 16px;
-      margin-top: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-  </style>
-</head>
-<body>
-<h2>Multiplication Table Generator</h2>
-<p>Enter a number to generate its multiplication table:</p>
-<input type="number" id="numberInput" placeholder="Enter a number">
-<button onclick="generateTable()">Generate Table</button>
-<div id="output"></div>
-
-<script>
-  function generateTable() {
-    let num = document.getElementById('numberInput').value;
-    let outputDiv = document.getElementById('output');
-    outputDiv.innerHTML = '';
-
-    if (num === '' || isNaN(num)) {
-      outputDiv.innerHTML = '<p>Please enter a valid number.</p>';
-      return;
-    }
-
-    outputDiv.innerHTML = `<h3>Multiplication Table for ${num}</h3>`;
-    for (let i = 1; i <= 10; i++) {
-      outputDiv.innerHTML += `<p>${num} x ${i} = ${num * i}</p>`;
-    }
-  }
-</script>
-</body>
 </html>
