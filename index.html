@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Loop Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<h2>Learn For Loops in JavaScript</h2>
+<p>Click the button to generate numbers from 1 to 10 using a for loop!</p>
+<button onclick="generateNumbers()">Generate Numbers</button>
+<div id="output"></div>
+
+<script>
+  function generateNumbers() {
+    let outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = ''; // Clear previous output
+
+    for (let i = 1; i <= 10; i++) {
+      outputDiv.innerHTML += `<p>Number: ${i}</p>`;
+    }
+  }
+</script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      text-align: left;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #218838;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+<h2>Multiplication Table Generator</h2>
+<p>Enter a number to generate its multiplication table:</p>
+<input type="number" id="numberInput" placeholder="Enter a number">
+<button onclick="generateTable()">Generate Table</button>
+<div id="output"></div>
+
+<script>
+  function generateTable() {
+    let num = document.getElementById('numberInput').value;
+    let outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = '';
+
+    if (num === '' || isNaN(num)) {
+      outputDiv.innerHTML = '<p>Please enter a valid number.</p>';
+      return;
+    }
+
+    outputDiv.innerHTML = `<h3>Multiplication Table for ${num}</h3>`;
+    for (let i = 1; i <= 10; i++) {
+      outputDiv.innerHTML += `<p>${num} x ${i} = ${num * i}</p>`;
+    }
+  }
+</script>
+</body>
+</html>
